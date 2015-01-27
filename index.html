@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Welcome!</title>
+  <title>App</title>
 </head>
 <body>
-  Hello world.
+    <input id="input" type="text" name="" value="8000" placeholder="">
+    <input type="button" name="" value="Start" onclick="start()" />
+    <input type="button" name="" value="Start" onclick="stop()" />
 </body>
+<script>
+    var server = require('./express.js')
+    function start(){
+        var port = document.getElementById('input').value
+        server.app.listen(port)
+    }
+    function stop(){
+        server.close()
+    }
+</script>
 </html>

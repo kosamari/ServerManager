@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "start": "node server.js"
+    "start": "./node_modules/nw/bin/nw"
   },
+  "main": "index.html",
   "homepage": "https://github.com/kosamari/ServerManager",
   "dependencies": {
-    "express": "~4.10.1"
+    "express": "~4.10.1",
+    "nw": "^0.12.0-alpha2"
   }
 }
