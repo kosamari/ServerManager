@@ -4,6 +4,7 @@
   <title>App</title>
 </head>
 <body>
+    <input id="path" type="text" />
     <input id="input" type="text" name="" value="8000" placeholder="">
     <input type="button" name="" value="Start" onclick="start()" />
     <input type="button" name="" value="Start" onclick="stop()" />
@@ -11,8 +12,9 @@
 <script>
     var server = require('./express.js')
     function start(){
+        var path = document.getElementById('path').value
         var port = document.getElementById('input').value
-        server.app.listen(port)
+        server.run(port, path)
     }
     function stop(){
         server.close()

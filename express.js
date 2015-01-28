@@ -3,9 +3,8 @@ var app = express();
 // var port = 3000;
 var location = __dirname;
 
-app.use(express.static(location));
-
-exports.run = function(port){
+exports.run = function(port, path){
+    app.use(express.static(path));
     app.listen(port);
 }
 
